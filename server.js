@@ -16,7 +16,7 @@ app.post("/download", async (req, res) => {
     try {
         ytdl.getInfo(vidURL).then((info) => {
             // Select the video format and quality
-            const format = ytdl.chooseFormat(info.formats, { quality: "248" });
+            const format = ytdl.chooseFormat(info.formats, { quality: "highest" });
             // Set appropriate headers for the response
             res.setHeader('Content-Disposition', `attachment; filename="video.${format.container}"`);
             res.setHeader('Content-Type', 'video/mp4');
