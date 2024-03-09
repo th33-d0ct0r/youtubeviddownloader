@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube video downloader</title>
+</head>
+<body>
+    <form action="/download" method="post">
+        <input type="text" name="vidURL" placeholder="enter video link">
+        <button type="submit">Submit</button>
+    </form>
+
+    <% if (message == "success") { %>
+        <a href="/video.mp4">Download</a>
+    <% } %>
+</body>
+</html>
